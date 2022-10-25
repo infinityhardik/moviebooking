@@ -8,7 +8,7 @@ module.exports = (app) => {
   router.get("/movies", movies.findAllMovies);
   router.get("/movies?status=PUBLISHED", movies.findAllMovies);
   router.get("/movies?status=RELEASED", movies.findAllMovies);
-  router.get("/movies/{movieId}", movies.findOne);
+  router.get("/movies/:movieId", movies.findOne);
   router.get(
     "/movies?status=RELEASED&title={title}&genres={genres}&artists={artists}&start_date={startdate}&end_date={enddate}",
     movies.findAllMovies
